@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import { Spotlight } from "@/app/components/ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { motion } from 'framer-motion';
 import Link from "next/link";
 
 export default function Hero() {
@@ -16,9 +18,14 @@ export default function Hero() {
         />
       <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0 space-y-6">
         <TextGenerateEffect className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50" words="Get a Virtual CISO at half the cost" delay={0.2} />
-        <TextGenerateEffect className="mt-4 font-normal text-2xl text-neutral-300 w-full lg:w-[75%] text-center mx-auto leading-8" words="As CyWreck, we prioritize cost control and robust security. With your own V-CISO, you can achieve both effortlessly!" delay={0.15}/>
+        <TextGenerateEffect className="mt-4 font-normal text-2xl text-neutral-300 w-full lg:w-[75%] text-center mx-auto leading-8" words="As CyWreck, we prioritize cost control and robust security. With your own V-CISO, you can achieve both effortlessly!" delay={0.12}/>
       </div>
-      <div className="flex justify-center items-center gap-8 mt-4">
+      <motion.div 
+        className="flex justify-center items-center gap-8 mt-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, delay: 1.5 }}
+      >
         <Link href="https://calendly.com/utkrist/">
             <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -27,10 +34,12 @@ export default function Hero() {
                 </span>
             </button>
         </Link>
-        <button className="px-4 py-2 rounded-xl border border-neutral-600 text-black bg-gradient-to-b from-neutral-50 to-neutral-400 hover:bg-gray-100 transition duration-200">
-            Learn More
-        </button>
-      </div>
+        <Link href="#features">
+          <button className="px-4 py-2 rounded-xl border border-neutral-600 text-black bg-gradient-to-b from-neutral-50 to-neutral-400 hover:bg-gray-100 transition duration-200">
+              Learn More
+          </button>
+        </Link>
+      </motion.div>
     </div>
   );
 }
