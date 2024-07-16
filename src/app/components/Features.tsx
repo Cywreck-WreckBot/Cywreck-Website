@@ -14,8 +14,8 @@ export default function Features() {
     }, [controls, inView]);
   
   return (
-    <div id="features" className="w-[80%] flex flex-col justify-center items-center px-8 min-h-screen">
-        <div className="p-4 mx-auto relative z-10 w-full pt-20 md:pt-0 space-y-6" ref={ref}>
+    <div id="features" className="w-full md:w-[80%] flex flex-col justify-center items-center px-8 min-h-screen">
+        <div className="p-4 max-sm:px-0 mx-auto relative z-10 w-full pt-20 md:pt-0 space-y-6" ref={ref}>
             <motion.div
                 initial="hidden"
                 animate={controls}
@@ -36,7 +36,7 @@ export default function Features() {
                 }}
                 className="mt-4 font-normal text-2xl text-neutral-300 w-full text-center mx-auto leading-8"
             >
-                Prevent cyberattacks from crippling your business with CyWreck's Virtual CISO. Get expert security leadership instantly without the full-time cost. Rest easy knowing your data and reputation are protected against evolving threats
+                Prevent cyberattacks from crippling your business with CyWreck&apos;s Virtual CISO. Get expert security leadership instantly without the full-time cost. Rest easy knowing your data and reputation are protected against evolving threats
             </motion.div>
         </div>
         <motion.div

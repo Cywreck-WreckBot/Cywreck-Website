@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="min-h-screen w-full rounded-md flex flex-col md:items-center md:justify-center bg-black/[0.96] antialiased relative overflow-hidden">
+    <div className="md:min-h-screen max-sm:mb-8 w-full rounded-md flex flex-col md:items-center md:justify-center bg-black/[0.96] antialiased relative overflow-hidden">
         <Spotlight
             className="-top-40 left-0 md:left-72 md:-top-20"
             fill="blue"
